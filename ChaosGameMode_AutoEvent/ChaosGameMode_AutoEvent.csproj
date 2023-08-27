@@ -1,0 +1,374 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E45E0DD9-A047-4998-BC8C-FD2AA0283B9E}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ChaosGameMode_AutoEvent</RootNamespace>
+    <AssemblyName>ChaosGameMode_AutoEvent</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="0Harmony">
+      <HintPath>..\..\ZombieRushEvent_AutoEvent\ZombieRushEvent_AutoEvent\bin\Release\0Harmony.dll</HintPath>
+    </Reference>
+    <Reference Include="AdminTools">
+      <HintPath>..\..\ZombieRushEvent_AutoEvent\ZombieRushEvent_AutoEvent\bin\Release\AdminTools.dll</HintPath>
+    </Reference>
+    <Reference Include="Assembly-CSharp-firstpass">
+      <HintPath>..\..\ZombieRushEvent_AutoEvent\ZombieRushEvent_AutoEvent\bin\Release\Assembly-CSharp-firstpass.dll</HintPath>
+    </Reference>
+    <Reference Include="Assembly-CSharp-Publicized">
+      <HintPath>..\..\ZombieRushEvent_AutoEvent\ZombieRushEvent_AutoEvent\bin\Release\Assembly-CSharp-Publicized.dll</HintPath>
+    </Reference>
+    <Reference Include="BouncyCastle.Cryptography">
+      <HintPath>..\..\ZombieRushEvent_AutoEvent\ZombieRushEvent_AutoEvent\bin\Release\BouncyCastle.Cryptography.dll</HintPath>
+    </Reference>
+    <Reference Include="Caress">
+      <HintPath>..\..\ZombieRushEvent_AutoEvent\ZombieRushEvent_AutoEvent\bin\Release\Caress.dll</HintPath>
+    </Reference>
+    <Reference Include="CommandSystem.Core">
+      <HintPath>..\..\ZombieRushEvent_AutoEvent\ZombieRushEvent_AutoEvent\bin\Release\CommandSystem.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="EXILED">
+      <HintPath>..\..\ZombieRushEvent_AutoEvent\ZombieRushEvent_AutoEvent\bin\Release\EXILED.dll</HintPath>
+    </Reference>
+    <Reference Include="Exiled.API">
+      <HintPath>..\..\ZombieRushEvent_AutoEvent\ZombieRushEvent_AutoEvent\bin\Release\Exiled.API.dll</HintPath>
+    </Reference>
+    <Reference Include="Exiled.CustomItems">
+      <HintPath>..\..\ZombieRushEvent_AutoEvent\ZombieRushEvent_AutoEvent\bin\Release\Exiled.CustomItems.dll</HintPath>
+    </Reference>
+    <Reference Include="Exiled.CustomRoles">
+      <HintPath>..\..\ZombieRushEvent_AutoEvent\ZombieRushEvent_AutoEvent\bin\Release\Exiled.CustomRoles.dll</HintPath>
+    </Reference>
+    <Reference Include="Exiled.Events">
+      <HintPath>..\..\ZombieRushEvent_AutoEvent\ZombieRushEvent_AutoEvent\bin\Release\Exiled.Events.dll</HintPath>
+    </Reference>
+    <Reference Include="Exiled.Permissions">
+      <HintPath>..\..\ZombieRushEvent_AutoEvent\ZombieRushEvent_AutoEvent\bin\Release\Exiled.Permissions.dll</HintPath>
+    </Reference>
+    <Reference Include="EXILED_Events">
+      <HintPath>..\..\ZombieRushEvent_AutoEvent\ZombieRushEvent_AutoEvent\bin\Release\EXILED_Events.dll</HintPath>
+    </Reference>
+    <Reference Include="Facepunch.Steamworks.Win64">
+      <HintPath>..\..\ZombieRushEvent_AutoEvent\ZombieRushEvent_AutoEvent\bin\Release\Facepunch.Steamworks.Win64.dll</HintPath>
+    </Reference>
+    <Reference Include="Mirror">
+      <HintPath>..\..\ZombieRushEvent_AutoEvent\ZombieRushEvent_AutoEvent\bin\Release\Mirror.dll</HintPath>
+    </Reference>
+    <Reference Include="Mirror.Components">
+      <HintPath>..\..\ZombieRushEvent_AutoEvent\ZombieRushEvent_AutoEvent\bin\Release\Mirror.Components.dll</HintPath>
+    </Reference>
+    <Reference Include="Mono.Security">
+      <HintPath>..\..\ZombieRushEvent_AutoEvent\ZombieRushEvent_AutoEvent\bin\Release\Mono.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="NorthwoodLib">
+      <HintPath>..\..\ZombieRushEvent_AutoEvent\ZombieRushEvent_AutoEvent\bin\Release\NorthwoodLib.dll</HintPath>
+    </Reference>
+    <Reference Include="PluginAPI">
+      <HintPath>..\..\ZombieRushEvent_AutoEvent\ZombieRushEvent_AutoEvent\bin\Release\PluginAPI.dll</HintPath>
+    </Reference>
+    <Reference Include="Pooling">
+      <HintPath>..\..\ZombieRushEvent_AutoEvent\ZombieRushEvent_AutoEvent\bin\Release\Pooling.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\ZombieRushEvent_AutoEvent\ZombieRushEvent_AutoEvent\bin\Release\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Unity.Burst">
+      <HintPath>..\..\ZombieRushEvent_AutoEvent\ZombieRushEvent_AutoEvent\bin\Release\Unity.Burst.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Burst.Unsafe">
+      <HintPath>..\..\ZombieRushEvent_AutoEvent\ZombieRushEvent_AutoEvent\bin\Release\Unity.Burst.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Mathematics">
+      <HintPath>..\..\ZombieRushEvent_AutoEvent\ZombieRushEvent_AutoEvent\bin\Release\Unity.Mathematics.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.ProBuilder">
+      <HintPath>..\..\ZombieRushEvent_AutoEvent\ZombieRushEvent_AutoEvent\bin\Release\Unity.ProBuilder.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.ProBuilder.Csg">
+      <HintPath>..\..\ZombieRushEvent_AutoEvent\ZombieRushEvent_AutoEvent\bin\Release\Unity.ProBuilder.Csg.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.ProBuilder.KdTree">
+      <HintPath>..\..\ZombieRushEvent_AutoEvent\ZombieRushEvent_AutoEvent\bin\Release\Unity.ProBuilder.KdTree.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.ProBuilder.Poly2Tri">
+      <HintPath>..\..\ZombieRushEvent_AutoEvent\ZombieRushEvent_AutoEvent\bin\Release\Unity.ProBuilder.Poly2Tri.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.ProBuilder.Stl">
+      <HintPath>..\..\ZombieRushEvent_AutoEvent\ZombieRushEvent_AutoEvent\bin\Release\Unity.ProBuilder.Stl.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.RenderPipelines.Core.Runtime">
+      <HintPath>..\..\ZombieRushEvent_AutoEvent\ZombieRushEvent_AutoEvent\bin\Release\Unity.RenderPipelines.Core.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.RenderPipelines.Core.ShaderLibrary">
+      <HintPath>..\..\ZombieRushEvent_AutoEvent\ZombieRushEvent_AutoEvent\bin\Release\Unity.RenderPipelines.Core.ShaderLibrary.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.RenderPipelines.HighDefinition.Config.Runtime">
+      <HintPath>..\..\ZombieRushEvent_AutoEvent\ZombieRushEvent_AutoEvent\bin\Release\Unity.RenderPipelines.HighDefinition.Config.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.RenderPipelines.HighDefinition.Runtime">
+      <HintPath>..\..\ZombieRushEvent_AutoEvent\ZombieRushEvent_AutoEvent\bin\Release\Unity.RenderPipelines.HighDefinition.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary">
+      <HintPath>..\..\ZombieRushEvent_AutoEvent\ZombieRushEvent_AutoEvent\bin\Release\Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.TextMeshPro">
+      <HintPath>..\..\ZombieRushEvent_AutoEvent\ZombieRushEvent_AutoEvent\bin\Release\Unity.TextMeshPro.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Timeline">
+      <HintPath>..\..\ZombieRushEvent_AutoEvent\ZombieRushEvent_AutoEvent\bin\Release\Unity.Timeline.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.VisualEffectGraph.Runtime">
+      <HintPath>..\..\ZombieRushEvent_AutoEvent\ZombieRushEvent_AutoEvent\bin\Release\Unity.VisualEffectGraph.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine">
+      <HintPath>..\..\ZombieRushEvent_AutoEvent\ZombieRushEvent_AutoEvent\bin\Release\UnityEngine.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.AccessibilityModule">
+      <HintPath>..\..\ZombieRushEvent_AutoEvent\ZombieRushEvent_AutoEvent\bin\Release\UnityEngine.AccessibilityModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.AIModule">
+      <HintPath>..\..\ZombieRushEvent_AutoEvent\ZombieRushEvent_AutoEvent\bin\Release\UnityEngine.AIModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.AndroidJNIModule">
+      <HintPath>..\..\ZombieRushEvent_AutoEvent\ZombieRushEvent_AutoEvent\bin\Release\UnityEngine.AndroidJNIModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.AnimationModule">
+      <HintPath>..\..\ZombieRushEvent_AutoEvent\ZombieRushEvent_AutoEvent\bin\Release\UnityEngine.AnimationModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.ARModule">
+      <HintPath>..\..\ZombieRushEvent_AutoEvent\ZombieRushEvent_AutoEvent\bin\Release\UnityEngine.ARModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.AssetBundleModule">
+      <HintPath>..\..\ZombieRushEvent_AutoEvent\ZombieRushEvent_AutoEvent\bin\Release\UnityEngine.AssetBundleModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.AudioModule">
+      <HintPath>..\..\ZombieRushEvent_AutoEvent\ZombieRushEvent_AutoEvent\bin\Release\UnityEngine.AudioModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.ClothModule">
+      <HintPath>..\..\ZombieRushEvent_AutoEvent\ZombieRushEvent_AutoEvent\bin\Release\UnityEngine.ClothModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.ClusterInputModule">
+      <HintPath>..\..\ZombieRushEvent_AutoEvent\ZombieRushEvent_AutoEvent\bin\Release\UnityEngine.ClusterInputModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.ClusterRendererModule">
+      <HintPath>..\..\ZombieRushEvent_AutoEvent\ZombieRushEvent_AutoEvent\bin\Release\UnityEngine.ClusterRendererModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.CoreModule">
+      <HintPath>..\..\ZombieRushEvent_AutoEvent\ZombieRushEvent_AutoEvent\bin\Release\UnityEngine.CoreModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.CrashReportingModule">
+      <HintPath>..\..\ZombieRushEvent_AutoEvent\ZombieRushEvent_AutoEvent\bin\Release\UnityEngine.CrashReportingModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.DirectorModule">
+      <HintPath>..\..\ZombieRushEvent_AutoEvent\ZombieRushEvent_AutoEvent\bin\Release\UnityEngine.DirectorModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.DSPGraphModule">
+      <HintPath>..\..\ZombieRushEvent_AutoEvent\ZombieRushEvent_AutoEvent\bin\Release\UnityEngine.DSPGraphModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.GameCenterModule">
+      <HintPath>..\..\ZombieRushEvent_AutoEvent\ZombieRushEvent_AutoEvent\bin\Release\UnityEngine.GameCenterModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.GIModule">
+      <HintPath>..\..\ZombieRushEvent_AutoEvent\ZombieRushEvent_AutoEvent\bin\Release\UnityEngine.GIModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.GridModule">
+      <HintPath>..\..\ZombieRushEvent_AutoEvent\ZombieRushEvent_AutoEvent\bin\Release\UnityEngine.GridModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.HotReloadModule">
+      <HintPath>..\..\ZombieRushEvent_AutoEvent\ZombieRushEvent_AutoEvent\bin\Release\UnityEngine.HotReloadModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.ImageConversionModule">
+      <HintPath>..\..\ZombieRushEvent_AutoEvent\ZombieRushEvent_AutoEvent\bin\Release\UnityEngine.ImageConversionModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.IMGUIModule">
+      <HintPath>..\..\ZombieRushEvent_AutoEvent\ZombieRushEvent_AutoEvent\bin\Release\UnityEngine.IMGUIModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.InputLegacyModule">
+      <HintPath>..\..\ZombieRushEvent_AutoEvent\ZombieRushEvent_AutoEvent\bin\Release\UnityEngine.InputLegacyModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.InputModule">
+      <HintPath>..\..\ZombieRushEvent_AutoEvent\ZombieRushEvent_AutoEvent\bin\Release\UnityEngine.InputModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.JSONSerializeModule">
+      <HintPath>..\..\ZombieRushEvent_AutoEvent\ZombieRushEvent_AutoEvent\bin\Release\UnityEngine.JSONSerializeModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.LocalizationModule">
+      <HintPath>..\..\ZombieRushEvent_AutoEvent\ZombieRushEvent_AutoEvent\bin\Release\UnityEngine.LocalizationModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.NVIDIAModule">
+      <HintPath>..\..\ZombieRushEvent_AutoEvent\ZombieRushEvent_AutoEvent\bin\Release\UnityEngine.NVIDIAModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.ParticleSystemModule">
+      <HintPath>..\..\ZombieRushEvent_AutoEvent\ZombieRushEvent_AutoEvent\bin\Release\UnityEngine.ParticleSystemModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.PerformanceReportingModule">
+      <HintPath>..\..\ZombieRushEvent_AutoEvent\ZombieRushEvent_AutoEvent\bin\Release\UnityEngine.PerformanceReportingModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.Physics2DModule">
+      <HintPath>..\..\ZombieRushEvent_AutoEvent\ZombieRushEvent_AutoEvent\bin\Release\UnityEngine.Physics2DModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.PhysicsModule">
+      <HintPath>..\..\ZombieRushEvent_AutoEvent\ZombieRushEvent_AutoEvent\bin\Release\UnityEngine.PhysicsModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.ProfilerModule">
+      <HintPath>..\..\ZombieRushEvent_AutoEvent\ZombieRushEvent_AutoEvent\bin\Release\UnityEngine.ProfilerModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.RuntimeInitializeOnLoadManagerInitializerModule">
+      <HintPath>..\..\ZombieRushEvent_AutoEvent\ZombieRushEvent_AutoEvent\bin\Release\UnityEngine.RuntimeInitializeOnLoadManagerInitializerModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.ScreenCaptureModule">
+      <HintPath>..\..\ZombieRushEvent_AutoEvent\ZombieRushEvent_AutoEvent\bin\Release\UnityEngine.ScreenCaptureModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.SharedInternalsModule">
+      <HintPath>..\..\ZombieRushEvent_AutoEvent\ZombieRushEvent_AutoEvent\bin\Release\UnityEngine.SharedInternalsModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.SpriteMaskModule">
+      <HintPath>..\..\ZombieRushEvent_AutoEvent\ZombieRushEvent_AutoEvent\bin\Release\UnityEngine.SpriteMaskModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.SpriteShapeModule">
+      <HintPath>..\..\ZombieRushEvent_AutoEvent\ZombieRushEvent_AutoEvent\bin\Release\UnityEngine.SpriteShapeModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.StreamingModule">
+      <HintPath>..\..\ZombieRushEvent_AutoEvent\ZombieRushEvent_AutoEvent\bin\Release\UnityEngine.StreamingModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.SubstanceModule">
+      <HintPath>..\..\ZombieRushEvent_AutoEvent\ZombieRushEvent_AutoEvent\bin\Release\UnityEngine.SubstanceModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.SubsystemsModule">
+      <HintPath>..\..\ZombieRushEvent_AutoEvent\ZombieRushEvent_AutoEvent\bin\Release\UnityEngine.SubsystemsModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.TerrainModule">
+      <HintPath>..\..\ZombieRushEvent_AutoEvent\ZombieRushEvent_AutoEvent\bin\Release\UnityEngine.TerrainModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.TerrainPhysicsModule">
+      <HintPath>..\..\ZombieRushEvent_AutoEvent\ZombieRushEvent_AutoEvent\bin\Release\UnityEngine.TerrainPhysicsModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.TextCoreFontEngineModule">
+      <HintPath>..\..\ZombieRushEvent_AutoEvent\ZombieRushEvent_AutoEvent\bin\Release\UnityEngine.TextCoreFontEngineModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.TextCoreTextEngineModule">
+      <HintPath>..\..\ZombieRushEvent_AutoEvent\ZombieRushEvent_AutoEvent\bin\Release\UnityEngine.TextCoreTextEngineModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.TextRenderingModule">
+      <HintPath>..\..\ZombieRushEvent_AutoEvent\ZombieRushEvent_AutoEvent\bin\Release\UnityEngine.TextRenderingModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.TilemapModule">
+      <HintPath>..\..\ZombieRushEvent_AutoEvent\ZombieRushEvent_AutoEvent\bin\Release\UnityEngine.TilemapModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.TLSModule">
+      <HintPath>..\..\ZombieRushEvent_AutoEvent\ZombieRushEvent_AutoEvent\bin\Release\UnityEngine.TLSModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UI">
+      <HintPath>..\..\ZombieRushEvent_AutoEvent\ZombieRushEvent_AutoEvent\bin\Release\UnityEngine.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UIElementsModule">
+      <HintPath>..\..\ZombieRushEvent_AutoEvent\ZombieRushEvent_AutoEvent\bin\Release\UnityEngine.UIElementsModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UIElementsNativeModule">
+      <HintPath>..\..\ZombieRushEvent_AutoEvent\ZombieRushEvent_AutoEvent\bin\Release\UnityEngine.UIElementsNativeModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UIModule">
+      <HintPath>..\..\ZombieRushEvent_AutoEvent\ZombieRushEvent_AutoEvent\bin\Release\UnityEngine.UIModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UmbraModule">
+      <HintPath>..\..\ZombieRushEvent_AutoEvent\ZombieRushEvent_AutoEvent\bin\Release\UnityEngine.UmbraModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UNETModule">
+      <HintPath>..\..\ZombieRushEvent_AutoEvent\ZombieRushEvent_AutoEvent\bin\Release\UnityEngine.UNETModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UnityAnalyticsCommonModule">
+      <HintPath>..\..\ZombieRushEvent_AutoEvent\ZombieRushEvent_AutoEvent\bin\Release\UnityEngine.UnityAnalyticsCommonModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UnityAnalyticsModule">
+      <HintPath>..\..\ZombieRushEvent_AutoEvent\ZombieRushEvent_AutoEvent\bin\Release\UnityEngine.UnityAnalyticsModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UnityConnectModule">
+      <HintPath>..\..\ZombieRushEvent_AutoEvent\ZombieRushEvent_AutoEvent\bin\Release\UnityEngine.UnityConnectModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UnityCurlModule">
+      <HintPath>..\..\ZombieRushEvent_AutoEvent\ZombieRushEvent_AutoEvent\bin\Release\UnityEngine.UnityCurlModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UnityTestProtocolModule">
+      <HintPath>..\..\ZombieRushEvent_AutoEvent\ZombieRushEvent_AutoEvent\bin\Release\UnityEngine.UnityTestProtocolModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UnityWebRequestAssetBundleModule">
+      <HintPath>..\..\ZombieRushEvent_AutoEvent\ZombieRushEvent_AutoEvent\bin\Release\UnityEngine.UnityWebRequestAssetBundleModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UnityWebRequestAudioModule">
+      <HintPath>..\..\ZombieRushEvent_AutoEvent\ZombieRushEvent_AutoEvent\bin\Release\UnityEngine.UnityWebRequestAudioModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UnityWebRequestModule">
+      <HintPath>..\..\ZombieRushEvent_AutoEvent\ZombieRushEvent_AutoEvent\bin\Release\UnityEngine.UnityWebRequestModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UnityWebRequestTextureModule">
+      <HintPath>..\..\ZombieRushEvent_AutoEvent\ZombieRushEvent_AutoEvent\bin\Release\UnityEngine.UnityWebRequestTextureModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UnityWebRequestWWWModule">
+      <HintPath>..\..\ZombieRushEvent_AutoEvent\ZombieRushEvent_AutoEvent\bin\Release\UnityEngine.UnityWebRequestWWWModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.VehiclesModule">
+      <HintPath>..\..\ZombieRushEvent_AutoEvent\ZombieRushEvent_AutoEvent\bin\Release\UnityEngine.VehiclesModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.VFXModule">
+      <HintPath>..\..\ZombieRushEvent_AutoEvent\ZombieRushEvent_AutoEvent\bin\Release\UnityEngine.VFXModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.VideoModule">
+      <HintPath>..\..\ZombieRushEvent_AutoEvent\ZombieRushEvent_AutoEvent\bin\Release\UnityEngine.VideoModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.VirtualTexturingModule">
+      <HintPath>..\..\ZombieRushEvent_AutoEvent\ZombieRushEvent_AutoEvent\bin\Release\UnityEngine.VirtualTexturingModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.VRModule">
+      <HintPath>..\..\ZombieRushEvent_AutoEvent\ZombieRushEvent_AutoEvent\bin\Release\UnityEngine.VRModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.WindModule">
+      <HintPath>..\..\ZombieRushEvent_AutoEvent\ZombieRushEvent_AutoEvent\bin\Release\UnityEngine.WindModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.XRModule">
+      <HintPath>..\..\ZombieRushEvent_AutoEvent\ZombieRushEvent_AutoEvent\bin\Release\UnityEngine.XRModule.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ChaosGameMode.cs" />
+    <Compile Include="Commands\Commands.cs" />
+    <Compile Include="Commands\StopChaosCommand.cs" />
+    <Compile Include="Config.cs" />
+    <Compile Include="Handlers\EventHandlers.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
