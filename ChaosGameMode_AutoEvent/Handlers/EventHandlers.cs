@@ -160,7 +160,7 @@ namespace ChaosGameMode_AutoEvent.Handlers
                             {
                                 if (player.Role != RoleTypeId.Overwatch)
                                 {
-                                    if (Warhead.IsDetonated == false)
+                                    if (Warhead.IsInProgress == false && Warhead.IsDetonated == false)
                                     {
                                         int RandomChaoticClass = rand.Next(1, 36);
 
