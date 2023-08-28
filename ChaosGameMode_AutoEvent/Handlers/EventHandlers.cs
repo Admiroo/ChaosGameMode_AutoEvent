@@ -79,9 +79,9 @@ namespace ChaosGameMode_AutoEvent.Handlers
 
                     if (ChaoticChance == 1)
                     {
-                        int ChaoticState = rand.Next(1, 21);
+                        int ChaoticState = rand.Next(1, 51);
 
-                        if (ChaoticState > 0 && ChaoticState < 19)
+                        if (ChaoticState > 0 && ChaoticState < 50)
                         {
                             int ChaoticBuff = rand.Next(1, 6);
 
