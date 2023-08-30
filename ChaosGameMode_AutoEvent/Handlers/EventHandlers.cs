@@ -295,7 +295,7 @@ namespace ChaosGameMode_AutoEvent.Handlers
                                                 else
                                                 {
                                                     player.Role.Set(RoleTypeId.Scp096, RoleSpawnFlags.AssignInventory);
-                                                    player.Teleport(DoorType.EscapeSecondary);
+                                                    player.Position = new Vector3(-17.641f, 991.9f, -42.766f);
                                                 }
                                             }
                                             else
@@ -413,7 +413,7 @@ namespace ChaosGameMode_AutoEvent.Handlers
                                     }
                                     else
                                     {
-                                        player.Position = RoleExtensions.GetRandomSpawnLocation(RoleTypeId.ChaosRepressor).Position;
+                                        player.Position = new Vector3(38.223f, 1001, -42.570f);
                                     }
                                 }
                                 else if (RandomTeleport == 2)
@@ -424,7 +424,7 @@ namespace ChaosGameMode_AutoEvent.Handlers
                                     }
                                     else
                                     {
-                                        player.Position = RoleExtensions.GetRandomSpawnLocation(RoleTypeId.ChaosRepressor).Position;
+                                        player.Position = new Vector3(10.406f, 997.6f, -23.090f);
                                     }
                                 }
                                 else if (RandomTeleport == 3)
@@ -439,7 +439,7 @@ namespace ChaosGameMode_AutoEvent.Handlers
                                     }
                                     else if (Warhead.IsInProgress == false && Warhead.IsDetonated == false)
                                     {
-                                        player.Teleport(DoorType.Intercom);
+                                        player.Position = RoleExtensions.GetRandomSpawnLocation(RoleTypeId.FacilityGuard).Position;
                                     }
                                     else
                                     {
@@ -454,7 +454,7 @@ namespace ChaosGameMode_AutoEvent.Handlers
                                     }
                                     else
                                     {
-                                        player.Teleport(DoorType.NukeSurface);
+                                        player.Position = new Vector3(63, 995.8f, -36.481f);
                                     }
                                 }
                                 else if (RandomTeleport == 6)
@@ -491,14 +491,14 @@ namespace ChaosGameMode_AutoEvent.Handlers
                                     }
                                     else
                                     {
-                                        player.Position = RoleExtensions.GetRandomSpawnLocation(RoleTypeId.NtfSergeant).Position;
+                                        player.Position = new Vector3(136.059f, 995.6f, -63.813f);
                                     }
                                 }
                                 else if (RandomTeleport == 9)
                                 {
                                     if (Warhead.IsInProgress == false && Warhead.IsDetonated == false)
                                     {
-                                        player.Teleport(DoorType.Scp049Armory);
+                                        player.Position = RoleExtensions.GetRandomSpawnLocation(RoleTypeId.Scp049).Position;
                                     }
                                     else
                                     {
@@ -524,11 +524,11 @@ namespace ChaosGameMode_AutoEvent.Handlers
                                     }
                                     else if (Warhead.IsInProgress == false && Warhead.IsDetonated == false)
                                     {
-                                        player.Teleport(DoorType.ElevatorScp049);
+                                        player.Position = new Vector3(29.724f, -998.8f, 109.719f);
                                     }
                                     else
                                     {
-                                        player.Teleport(DoorType.SurfaceGate);
+                                        player.Position = new Vector3(0.590f, 1001.2f, -40.703f);
                                     }
                                 }
                                 else if (RandomTeleport == 12)
@@ -543,7 +543,7 @@ namespace ChaosGameMode_AutoEvent.Handlers
                                     }
                                     else
                                     {
-                                        player.Position = RoleExtensions.GetRandomSpawnLocation(RoleTypeId.NtfCaptain).Position;
+                                        player.Position = new Vector3(0.012f, 1001.2f, 5.457f);
                                     }
                                 }
                                 else if (RandomTeleport == 13)
@@ -565,11 +565,11 @@ namespace ChaosGameMode_AutoEvent.Handlers
                                 {
                                     if (Round.ElapsedTime.TotalSeconds < 480 && Warhead.IsInProgress == false && Warhead.IsDetonated == false)
                                     {
-                                        player.Teleport(DoorType.HczArmory);
+                                        player.Position = RoleExtensions.GetRandomSpawnLocation(RoleTypeId.ClassD).Position;
                                     }
                                     else if (Warhead.IsInProgress == false && Warhead.IsDetonated == false)
                                     {
-                                        player.Teleport(DoorType.ElevatorGateA);
+                                        player.Position = new Vector3(125.680f, -998.8f, 104.922f);
                                     }
                                     else
                                     {
@@ -595,7 +595,7 @@ namespace ChaosGameMode_AutoEvent.Handlers
                                 {
                                     if (Warhead.IsInProgress == false && Warhead.IsDetonated == false)
                                     {
-                                        player.Teleport(DoorType.Scp079First);
+                                        player.Teleport(DoorType.HIDLeft);
                                     }
                                     else
                                     {
@@ -606,7 +606,7 @@ namespace ChaosGameMode_AutoEvent.Handlers
                                 {
                                     if (Warhead.IsInProgress == false && Warhead.IsDetonated == false)
                                     {
-                                        player.Teleport(DoorType.ElevatorNuke);
+                                        player.Position = new Vector3(60.043f, -998.8f, 105.129f);
                                     }
                                     else
                                     {
@@ -621,7 +621,7 @@ namespace ChaosGameMode_AutoEvent.Handlers
                                     }
                                     else if (Warhead.IsInProgress == false && Warhead.IsDetonated == false)
                                     {
-                                        player.Teleport(DoorType.Intercom);
+                                        player.Position = RoleExtensions.GetRandomSpawnLocation(RoleTypeId.FacilityGuard).Position;
                                     }
                                     else
                                     {
@@ -652,7 +652,7 @@ namespace ChaosGameMode_AutoEvent.Handlers
 
                                 if (RandomSizes == 1)
                                 {
-                                    player.Scale = new Vector3(1.2f, 1.1f, 1.2f);
+                                    player.Scale = new Vector3(1.2f, 1f, 1.2f);
                                 }
                                 else if (RandomSizes == 2)
                                 {
@@ -660,7 +660,7 @@ namespace ChaosGameMode_AutoEvent.Handlers
                                 }
                                 else if (RandomSizes == 3)
                                 {
-                                    player.Scale = new Vector3(0.2f, 1.1f, 1.2f);
+                                    player.Scale = new Vector3(0.2f, 1f, 1.2f);
                                 }
                                 else if (RandomSizes == 4)
                                 {
@@ -674,23 +674,23 @@ namespace ChaosGameMode_AutoEvent.Handlers
 
                             if (zonetype == 1)
                             {
-                                Map.TurnOffAllLights(1);
+                                Map.TurnOffAllLights(2);
                             }
                             else if (zonetype == 2)
                             {
-                                Map.TurnOffAllLights(1, ZoneType.Entrance);
+                                Map.TurnOffAllLights(2, ZoneType.Entrance);
                             }
                             else if (zonetype == 3)
                             {
-                                Map.TurnOffAllLights(1, ZoneType.HeavyContainment);
+                                Map.TurnOffAllLights(2, ZoneType.HeavyContainment);
                             }
                             else if (zonetype == 4)
                             {
-                                Map.TurnOffAllLights(1, ZoneType.LightContainment);
+                                Map.TurnOffAllLights(2, ZoneType.LightContainment);
                             }
                             else if (zonetype == 5)
                             {
-                                Map.TurnOffAllLights(1, ZoneType.Surface);
+                                Map.TurnOffAllLights(2, ZoneType.Surface);
                             }
                         }
                     }
