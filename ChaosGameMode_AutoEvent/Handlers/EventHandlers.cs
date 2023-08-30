@@ -524,7 +524,7 @@ namespace ChaosGameMode_AutoEvent.Handlers
                                     }
                                     else if (Warhead.IsInProgress == false && Warhead.IsDetonated == false)
                                     {
-                                        player.Position = new Vector3(29.724f, -998.8f, 109.719f);
+                                        player.Teleport(DoorType.CheckpointArmoryB);
                                     }
                                     else
                                     {
@@ -569,7 +569,7 @@ namespace ChaosGameMode_AutoEvent.Handlers
                                     }
                                     else if (Warhead.IsInProgress == false && Warhead.IsDetonated == false)
                                     {
-                                        player.Position = new Vector3(125.680f, -998.8f, 104.922f);
+                                        player.Teleport(DoorType.Scp079Armory);
                                     }
                                     else
                                     {
@@ -606,7 +606,7 @@ namespace ChaosGameMode_AutoEvent.Handlers
                                 {
                                     if (Warhead.IsInProgress == false && Warhead.IsDetonated == false)
                                     {
-                                        player.Position = new Vector3(60.043f, -998.8f, 105.129f);
+                                        player.Teleport(DoorType.Scp096);
                                     }
                                     else
                                     {
